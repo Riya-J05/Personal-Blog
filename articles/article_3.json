@@ -1,0 +1,5 @@
+{
+    "title": "About HTML!",
+    "date": "2025-07-07",
+    "content": "Understanding <h1> Tags\r\nIn HTML, <h1> is used to define the most important heading. \r\nExample: <h1>This is a heading</h1>\r\n<b>Bold</b> vs <i>Italic</i>\r\nYou can emphasize words using <strong> or <em>.\r\nLike this: <strong>Important</strong>, <em>Note this</em>.\r\nTrying Something Sneaky \ud83d\ude08\r\n<script>alert(\"This shouldn't run!\")</script>\r\nClick <a href=\"https://example.com\">here</a> if it does.\r\n\r\n"
+}

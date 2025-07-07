@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+<!-- Set page title -->
+{% block title %}Delete Page{% endblock %} {% block content %}
+<!-- Centered delete confirmation form -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      <!-- Delete article form -->
+      <form action="/delete/{{ filename }}" method="post" class="login-card">
+        <h3 class="text-center mb-4">💀 Deleting an Article</h3>
+
+        <!-- Disabled input showing the article title -->
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            name="title"
+            disabled
+            value="{{ title }}"
+          />
+        </div>
+
+        <!-- Disabled input showing the article date -->
+        <div class="mb-3">
+          <label for="date" class="form-label">Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="date"
+            name="date"
+            disabled
+            value="{{ date }}"
+          />
+        </div>
+
+        <!-- Disabled textarea showing article content -->
+        <div class="mb-3">
+          <label for="content" class="form-label">Content</label>
+          <div class="form-floating">
+            <!-- Display article content for confirmation -->
+            <textarea
+              class="form-control"
+              id="floatingTextarea2"
+              name="content"
+              style="height: 300px; min-height: 300px; resize: vertical"
+              disabled
+            >
+{{ content }}</textarea
+            >
+          </div>
+        </div>
+
+        <!-- Cancel link goes back to admin page -->
+        <a href="{{ url_for('admin') }}" class="btn btn-dark w-100">
+          ⬅️ Cancel
+        </a>
+
+        <!-- Confirm delete button -->
+        <input
+          type="submit"
+          value="🗑️ Confirm Delete"
+          class="btn btn-danger w-100"
+          style="margin-top: 10px"
+        />
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

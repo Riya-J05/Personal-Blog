@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+<!-- Set page title -->
+{% block title %} Article {% endblock %}
+
+{% block content %}
+<!-- Article display box -->
+<div class="article-box">
+  
+  <!-- Article title -->
+  <h1>{{ article.get("title") }}</h1>
+  
+  <!-- Article date (italic style) -->
+  <h5 style="font-style: italic">{{ article.get("date") }}</h5>
+  
+  <!-- Article content inside <pre> to preserve line breaks -->
+  <p>
+    <pre class="article-content">{{ article.get("content") | e }}</pre>
+  </p>
+
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+<!-- Set page title -->
+{% block title %}Admin Page{% endblock %} {% block content %}
+
+<!-- Header with title and "Add Article" button -->
+<div class="mb-4">
+  <div class="d-flex align-items-center" style="gap: 127ch; margin: 15px 22px">
+    <h1 class="mb-0">🔒 Admin Console</h1>
+    <a href="{{ url_for('add') }}" class="btn custom-btn"> 🌱 Add Article </a>
+  </div>
+</div>
+
+<!-- List of articles with Edit/Delete buttons -->
+<div class="container px-4">
+  {% for article in articles %}
+  <div class="article-row">
+    <!-- Link to view article -->
+    <a
+      href="{{ url_for('view_article', filename=article) }}"
+      class="article-name"
+    >
+      📝 {{ article.replace("_", " ").replace(".json", "") }}
+    </a>
+
+    <div>
+      <!-- Edit article button -->
+      <a
+        href="{{ url_for('edit', filename=article) }}"
+        class="btn btn-outline-info btn-sm me-2"
+      >
+        ✏️ Edit
+      </a>
+
+      <!-- Delete article button -->
+      <a
+        href="{{ url_for('delete', filename=article) }}"
+        class="btn btn-outline-danger btn-sm"
+      >
+        🗑️ Delete
+      </a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

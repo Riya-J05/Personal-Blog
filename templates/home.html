@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+<!-- Set page title -->
+{% block title %}Home - Personal Blog{% endblock %} {% block content %}
+<!-- Page heading -->
+<h1 style="margin: 10px 0 50px 0">📓 Article Archive</h1>
+
+<!-- Container for article list -->
+<div class="container px-4">
+  {% for article in articles %}
+  <div class="article-row">
+    <!-- Link to individual article page -->
+    <a
+      href="{{ url_for('view_article', filename=article) }}"
+      class="article-name"
+    >
+      📝 {{ article.replace("_", " ").replace(".json", "") }}
+    </a>
+  </div>
+  {% endfor %} {% endblock %}
+</div>

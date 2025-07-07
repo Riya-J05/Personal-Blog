@@ -1,0 +1,115 @@
+body {
+  background-color: rgb(
+    245,
+    245,
+    245
+  ); /* gentle background behind the login box */
+}
+
+.article-name {
+  font-size: 18px;
+}
+
+.article-box {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 228, 220);
+  width: fit-content; /* box shrinks to fit content */
+  max-width: 120ch; /*  keeps it readable on large screens */
+  margin: 40px auto; /* centers the box horizontally */
+  padding: 20px 30px; /* adds space inside the box */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-content {
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.login-card {
+  background-color: rgb(255, 228, 220); /* soft peach blush */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h3 {
+  color: rgb(80, 80, 80);
+  font-weight: 600;
+}
+
+.login-card .form-label {
+  color: rgb(60, 60, 60);
+}
+
+.login-card input:focus {
+  border-color: rgb(200, 222, 245); /* soft blue outline */
+  box-shadow: 0 0 0 0.2rem rgba(180, 212, 240, 0.25);
+}
+
+/* .article-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+} */
+
+.article-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 12px 24px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* .article-row span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+} */
+
+.article-row span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  max-width: 80%;
+  word-break: break-word;
+}
+
+.custom-btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+
+  /* Size, spacing */
+  font-size: 1rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+
+  /* Border & transition */
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+
+  /* Your custom color */
+  background-color: rgb(100, 149, 237); /* cornflower blue */
+  color: #fff;
+}
+
+.custom-btn:hover {
+  background-color: rgb(70, 130, 180); /* steel blue */
+  color: #fff;
+}

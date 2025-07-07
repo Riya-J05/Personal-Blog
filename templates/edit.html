@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+<!-- Set page title -->
+{% block title %} Edit Article {% endblock %} {% block content %}
+<!-- Centered article edit form with spacing -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      <!-- Edit article form -->
+      <form action="/edit/{{ filename }}" method="post" class="login-card">
+        <h3 class="text-center mb-4">🔧 Editing an Article</h3>
+
+        <!-- Title input (pre-filled) -->
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            name="title"
+            required
+            value="{{ title }}"
+          />
+        </div>
+
+        <!-- Date input (pre-filled) -->
+        <div class="mb-3">
+          <label for="date" class="form-label">Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="date"
+            name="date"
+            required
+            value="{{ date }}"
+          />
+        </div>
+
+        <!-- Article content textarea (pre-filled) -->
+        <div class="mb-3">
+          <label for="content" class="form-label">Content</label>
+          <div class="form-floating">
+            <!-- Multiline text area for editing content -->
+            <textarea
+              class="form-control"
+              id="floatingTextarea2"
+              name="content"
+              style="height: 300px; min-height: 300px; resize: vertical"
+            >
+{{ content }}</textarea
+            >
+          </div>
+        </div>
+
+        <!-- Submit updated article -->
+        <input type="submit" value="Submit" class="btn btn-primary w-100" />
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
